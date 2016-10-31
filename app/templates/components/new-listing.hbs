@@ -1,0 +1,26 @@
+{{#if addNewListing}}
+  <h1>List a new item</h1>
+  <div>
+    <form>
+      <div>
+        <label for="username">Enter new username</label>
+        {{input value=username id="username"}}
+      </div>
+      <div>
+        <label for="category">Enter category</label>
+        {{input value=category id="category"}}
+      </div>
+      <div>
+        <label for="content">Enter content for listing</label>
+        {{input value=content id="content"}}
+      </div>
+      <div>
+        <label for="image">Add an image URL</label>
+        {{input value=image id="image"}}
+      </div>
+    </form>
+    <button {{action 'saveListing'}}>Save</button>
+  </div>
+  {{else}}
+    <button {{action 'listingFormShow'}}>New Listing</button>
+  {{/if}}

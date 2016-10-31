@@ -1,0 +1,7 @@
+<li>
+  {{#link-to 'listing' listing.id}}{{listing.username}} | {{listing.date}} | {{listing.category}}{{/link-to}}
+<hr>
+ <p><img src={{listing.image}} alt={{listing.category}}></p>
+{{listing.content}}
+<hr>
+</li>
