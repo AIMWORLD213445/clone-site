@@ -10,6 +10,11 @@ import Ember from 'ember';
     actions: {
       saveListing(params) {
         var newListing = this.store.createRecord('listing', params);
+        var categoryParams = {
+          name: params.category
+        }
+        var newCategory = this.store.createRecord('category', categoryParams);
+        newCategory.save();
         newListing.save();
         this.transitionTo('index');
     },

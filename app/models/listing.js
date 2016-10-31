@@ -6,4 +6,5 @@ export default DS.Model.extend({
     date :  DS.attr('date'),
     image : DS.attr(),
     username : DS.attr()
+    category: DS.belongsTo('category', { async: true }),
 });

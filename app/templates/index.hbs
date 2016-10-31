@@ -1,7 +1,7 @@
 <h1>Craig's List Clone </h1>
 
 <div>
-  {{#each model as |listing|}}
+  {{#each model.listings as |listing|}}
     {{listing-tile listing=listing}}
   {{/each}}
 </div>

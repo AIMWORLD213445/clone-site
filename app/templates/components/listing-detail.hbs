@@ -1,4 +1,11 @@
 Posted at: {{listing.date}}, by:{{listing.username}} <br>
 {{listing.category}} <hr> <p><img src={{listing.image}}  alt={{listing.category}}></p> <br>
 {{listing.content}}
+
+<h2>Categories</h2>
+<ul>
+  {{#each listing.categories as |category|}}
+    {{category-tile category=category}}
+  {{/each}}
+</ul>
 <button {{action 'delete' listing}}>Delete</button>

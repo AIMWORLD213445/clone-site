@@ -17,6 +17,16 @@ export default Ember.Route.extend({
     destroyListing(listing){
       listing.destroyRecord();
       this.transitionTo('index');
+    },
+
+    saveReview(params) {
+     var newCategory = this.store.createRecord('category', params);
+     var listing = params.listing;
+     listing.get('categories').addObject(newCategory);
+     newCategory.save().then(function() {
+       return listing.save();
+     });
+     this.transitionTo('listing', listing);
     }
   }
 });
