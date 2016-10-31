@@ -7,3 +7,14 @@
 </div>
 
 {{new-listing saveListing="saveListing"}}
+
+<h2>categories</h2>
+
+<div>
+  <ul>
+    {{#each model.categories as |category|}}
+     <li>{{category.name}}</li>
+     {{/each}}
+  </ul>
+
+</div>
